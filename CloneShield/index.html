@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloneShield: A Framework for Universal Perturbation Against Zero-Shot Voice Cloning</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Paper Card -->
+		<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+            <!-- <div class="card-content"> -->
+                <!-- Title Section -->
+                <div class="title-section">
+                    <h1 class="main-title">CloneShield:</h1>
+                    <h2 class="subtitle">A Framework for Universal Perturbation Against Zero-Shot Voice Cloning</h2>
+
+                    <!-- Links -->
+                    <div class="links-section">
+                        <a href="https://arxiv.org/abs/2505.19119" class="btn btn-outline">
+                            <i class="fas fa-file-text"></i>
+                            Paper
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+
+                    <!-- Authors -->
+                    <p class="authors">
+                        Renyuan Li, Zhibo Liang, Haichuan Zhang, Tianyu Shi, Zhiyuan Cheng, Jia Shi, Carl Yang, Mingjie Tang
+                    </p>
+                </div>
+
+                <!-- Abstract -->
+                <div class="section">
+                    <h3 class="section-title">Abstract:</h3>
+					<p class="abstract-text">
+					    Recent breakthroughs in text-to-speech (TTS) voice cloning have raised serious
+					     privacy concerns, allowing highly accurate vocal identity replication from just a few
+					     seconds of reference audio, while retaining the speaker’s vocal authenticity. In this
+					     paper, we introduce <strong>CloneShield</strong>, a universal time-domain adversarial perturbation
+					     framework specifically designed to defend against zero-shot voice cloning. Our
+					     method provides protection that is robust across speakers and utterances, without
+					     requiring any prior knowledge of the synthesized text. We formulate perturbation
+					     generation as a multi-objective optimization problem, and propose Multi-Gradient
+					     Descent Algorithm (MGDA) to ensure the robust protection across diverse ut
+					    terances. To preserve natural auditory perception for users, we decompose the
+					     adversarial perturbation via Mel-spectrogram representations and fine-tune it for
+					     each sample. This design ensures imperceptibility while maintaining strong degra
+					    dation effects on zero-shot cloned outputs. Experiments on three state-of-the-art
+					     zero-shot TTS systems, five benchmark datasets and evaluations from 60 human
+					     listeners demonstrate that our method preserves near-original audio quality in
+					     protected inputs (PESQ = 3.90, SRS = 0.93) while substantially degrading both
+					     speaker similarity and speech quality in cloned samples (PESQ = 1.07, SRS =
+					     0.08). The source code is available at 
+					    <a href="https://github.com/......" class="link">https://github.com/......</a>.
+					</p>
+                </div>
+
+                <!-- Contents -->
+                <div class="section">
+                    <h3 class="section-title">Contents</h3>
+                    <ul class="contents-list">
+                        <li><a href="#workflow" class="link">CloneShield Workflow</a></li>
+                        <li><a href="#original-protected" class="link">Original and Protected Speech</a></li>
+                        <!-- <li><a href="#fine-tuning" class="link">Synthesized Speech based on Fine-tuning</a></li> -->
+                        <li><a href="#zero-shot" class="link">Synthesized Speech based on Zero-shot</a></li>
+                    </ul>
+                </div>
+            <!-- </div> -->
+		</div>
+
+        <!-- Workflow Section -->
+		<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+			<h2 id="workflow" class="section-header">CloneShield Workflow</h2>
+
+			<!-- Framework Image -->
+			<div class="workflow-container">
+				<img src="images/CLONESHIELD_framework.png" alt="CloneShield Framework Diagram" class="workflow-diagram">
+			</div>
+
+			<!-- Framework Description -->
+			<div class="framework-description">
+				<h3 class="description-title">Figure 1: Overview of our CLONESHIELD framework. </h3>
+				<p class="description-text">
+					We inject imperceptible perturbations to
+					 disrupt the unauthorized voice replication. The system consists of ❶Universal protective perturbation
+					 generation via multi-objective optimization. ❷Perceptual-frequency domain refinement/fine-tune
+					 using mel-spectrogram decomposition. ❸Real-world deployment scenarios showcasing how the
+					 perturbation thwarts unauthorized voice replication.
+				</p>
+			</div>
+		</div>
+				
+		<!-- Original and Protected Speech -->
+		<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+			<h2 id="original-protected" style="text-align: center;">Original and Protected Speech</h2>
+			<div class="text-center" style="margin-top: 3rem;">
+				<p>These samples are undefended and protected samples from LibriTTS dataset of speaker 5339, respectively.</p>
+			</div>
+			<div class="table-responsive pt-3">
+				<table class="table table-hover pt-2">
+					<thead>
+						<tr>
+							<th style="vertical-align: middle;text-align: center;"></th>
+							<th style="vertical-align: middle;text-align: center;">Method</th>
+							<th style="vertical-align: middle;text-align: center;">Sample 1</th>
+							<th style="vertical-align: middle;text-align: center;">Sample 2</th>
+							<th style="vertical-align: middle;text-align: center;">Sample 3</th>
+						</tr>
+						<tbody>
+							<!-- <tr>
+								<td style="vertical-align : middle;text-align:center;" rowspan="1">Text</td>
+								<td style="vertical-align: middle;text-align: center;"></td>
+								<td style="vertical-align: middle;text-align: center;">Goodbye, Philip.</td>
+								<td style="vertical-align: middle;text-align: center;">I can't come down again.</td>
+								<td style="vertical-align: middle;text-align: center;">Coulson sat still, penitent and ashamed. At length he stole a look at Hester.</td> -->
+							</tr>
+							<tr>
+								<td style="vertical-align : middle;text-align:center;" rowspan="1">Original</td>
+								<td style="vertical-align: middle;text-align: center;"></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_clean_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_clean_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_clean_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+		
+							<tr>
+								<td style="vertical-align : middle;text-align:center;" rowspan="8">Protected</td>
+								<td style="vertical-align: middle;text-align: center;">Voicebox</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_random-noise_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_random-noise_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_random-noise_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;">AudioSeal</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AdvPoison_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AdvPoison_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AdvPoison_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;">Timbre Watermarking</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_SEP_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_SEP_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_SEP_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;"><b>CloneShield</b>(YourTTS)</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_PTA_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_PTA_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_PTA_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;"><b>CloneShield</b>(XTTSv2)</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AttackVC_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AttackVC_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AttackVC_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;"><b>CloneShield</b>(IndexTTS)</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AntiFake_79.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AntiFake_105.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/1_real_samples/0_AntiFake_64.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+						</tbody>
+					</thead>
+				</table>
+			</div>
+		</div>
+			
+		<!-- Synthesized Speech based on Zero-shot	 -->
+		<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+			<h2 id="zero-shot" style="text-align: center;">Synthesized Speech based on Zero-shot</h2>
+			<div class="text-center" style="margin-top: 3rem;">
+				<p>These are synthesized speech from advanced zero-shot TTS models.</p>
+			</div>
+			<div class="table-responsive pt-3">
+				<table class="table table-hover pt-2">
+					<thead>
+						<tr>
+							<th style="vertical-align: middle;text-align: center;">Models</th>
+							<th style="vertical-align: middle;text-align: center;">Method</th>
+							<th style="vertical-align: middle;text-align: center;">Sample 1</th>
+							<th style="vertical-align: middle;text-align: center;">Sample 2</th>
+							<th style="vertical-align: middle;text-align: center;">Sample 3</th>
+						</tr>
+						<tbody>
+							<!-- <tr>
+								<td style="vertical-align : middle;text-align:center;"></td>
+								<td style="vertical-align: middle;text-align: center;">Original</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/line1_original/original_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/line1_original/original_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr> -->
+		
+							<tr>
+								<td style="vertical-align : middle;text-align:center;" rowspan="2">YourTTS</td>
+								<td style="vertical-align: middle;text-align: center;">clean</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;"><b>CloneShield</b></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_SPEC_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_SPEC_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+		
+							<tr>
+								<td style="vertical-align : middle;text-align:center;" rowspan="2">XTTSv2</td>
+								<td style="vertical-align: middle;text-align: center;">clean</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/XTTS_clean_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/XTTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;"><b>CloneShield</b></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/XTTS_SPEC_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/XTTS_SPEC_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+		
+							<tr>
+								<td style="vertical-align : middle;text-align:center;" rowspan="2">IndexTTS</td>
+								<td style="vertical-align: middle;text-align: center;">clean</td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/OpenVoice_clean_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/OpenVoice_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;text-align: center;"><b>CloneShield</b></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/OpenVoice_SPEC_32.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/OpenVoice_SPEC_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+								<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 275px;"><source src="audios/3_deepfake_zero-shot/linex_synthesized/TorToise-TTS_clean_6.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							</tr>
+						</tbody>
+					</thead>
+				</table>
+			</div>
+		</div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 SafeSpeech Research Team. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
