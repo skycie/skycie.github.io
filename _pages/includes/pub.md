@@ -1,4 +1,50 @@
+# 📝 Publications 
+## 🔬 AI for Healthcare
 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SPIE 2026</div><img src='images/spie.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[M<sup>3</sup>‑GloDets: multi-region and multi-scale analysis of fine‑grained diseased glomerular detection](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13932/1393210/M3GloDets--Multiregion-and-multiscale-analysis-of-finegrained-diseased-glomerular/10.1117/12.3085492.short) \\
+**Tianyu Shi**, Xinzi He, Hongjin Fang, Kenji Ikemura, Mert R. Sabuncu, Yihe Yang, Ruining Deng
+
+- We investigate multi-region and multi-scale strategies for fine-grained diseased glomerular detection in whole-slide renal pathology images.
+- Our study systematically evaluates the impact of imaging magnification, patch size, and model design on multi-class glomerular analysis.
+</div>
+</div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Lab Invest 2026</div><img src='images/uscap.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[AI-Based Identification and Quantification of Global Glomerulosclerosis in Nephrectomy Specimens: Accuracy and Its Predictive Value](https://www.laboratoryinvestigation.org/article/S0023-6837(25)01648-4/fulltext) \\
+Ruining Deng, **Tianyu Shi**, Steven Salvatore, Surya Seshan, Brian Robinson, Mert Sabuncu, Yihe Yang
+
+- We investigate AI-based quantification of global glomerulosclerosis from whole-slide renal pathology images using automated segmentation models.
+- Our study compares AI-derived and pathologist-estimated glomerulosclerosis measurements and explores their associations with longitudinal renal function decline.
+</div>
+</div>
+
+
+
+## 🛡️ AI Safety
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/cloneshield.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[CloneShield: A Framework for Universal Perturbation Against Zero-Shot Voice Cloning](https://arxiv.org/pdf/2505.19119) \\
+Renyuan Li, Zhibo Liang, Haichuan Zhang, **Tianyu Shi**, Zhiyuan Cheng, Jia Shi, Carl Yang, Mingjie Tang 
+
+[**Project**](https://5c3atest.github.io/CloneShield/)
+- We introduce CloneShield, a universal defense framework against zero-shot voice cloning. 
+- By generating imperceptible adversarial perturbations in the audio domain, our method protects speaker identity while maintaining natural audio quality, and effectively disrupts cloned speech generation across multiple state-of-the-art TTS systems.
+</div>
+</div>
+
+
+<!-- 
 # 📝 Publications 
 ## 🎙 Speech Synthesis
 
@@ -143,4 +189,4 @@ Jinglin Liu, Chengxi Li, **Yi Ren**, Feiyang Chen, Zhou Zhao
 
 ## Others
 - `NeurIPS 2023` [Unsupervised Video Domain Adaptation for Action Recognition: A Disentanglement Perspective](https://openreview.net/forum?id=Rp4PA0ez0m), Pengfei Wei, Lingdong Kong, Xinghua Qu, **Yi Ren**, et al.
-- ``ACM-MM 2022`` [Video-Guided Curriculum Learning for Spoken Video Grounding](), Yan Xia, Zhou Zhao, Shangwei Ye, Yang Zhao, Haoyuan Li, **Yi Ren**
+- ``ACM-MM 2022`` [Video-Guided Curriculum Learning for Spoken Video Grounding](), Yan Xia, Zhou Zhao, Shangwei Ye, Yang Zhao, Haoyuan Li, **Yi Ren** -->
