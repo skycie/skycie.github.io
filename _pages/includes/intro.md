@@ -1,10 +1,11 @@
-I am an undergraduate student majoring in Computer Science and Technology at the [College of Computer Science](https://cs.scu.edu.cn/e_jsjxy/General_Info/College_of_Computer_Science.htm), Sichuan University, and I expect to receive my B.S. degree in June 2026.
+<!-- I am an undergraduate student majoring in Computer Science and Technology at the [College of Computer Science](https://cs.scu.edu.cn/e_jsjxy/General_Info/College_of_Computer_Science.htm), Sichuan University, and I expect to receive my B.S. degree in June 2026. -->
+I earned my B.S. degree in Computer Science and Technology from the [College of Computer Science](https://cs.scu.edu.cn/e_jsjxy/General_Info/College_of_Computer_Science.htm), Sichuan University, in June 2026. Since then, I have been working as a research assistant in Prof. Li Lu's lab at Sichuan University.
 
 I have worked with [Yuhao Yi](https://yhyi15.github.io/) and [Mingjie Tang](http://merlintang.github.io/) at Sichuan University, as well as [Mert Sabuncu](https://sabuncu.engineering.cornell.edu/) and [Ruining Deng](https://ddrrnn123.github.io/) at Cornell University.
 
 I am currently applying to direct-entry PhD programs and looking for potential advisors and research opportunities. I am always happy to connect with researchers who share similar interests or are interested in possible collaborations.
 
-My current research interests include **AI for healthcare**, **medical image analysis**, and **AI safety**.
+My current research interests include **AI for healthcare**, **medical image analysis**, and **causal inference**.
 
 
 <!-- I am now working at [HeyGen](https://www.heygen.com) <img src='./images/heygen_logo.svg' style="width: 4em;">, leading foundation video model research team at the Singapore office. If you are seeking any form of **academic cooperation**, please feel free to email me at [rayeren613@gmail.com](mailto:rayeren613@gmail.com). We are hiring interns!

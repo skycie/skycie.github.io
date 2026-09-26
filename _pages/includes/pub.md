@@ -2,6 +2,19 @@
 ## 🔬 AI for Healthcare
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MICCAI 2026</div><img src='images/miccai.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[MORI-Seg: Learning Morphological Geometry for Instance Segmentation without Instance Annotations](https://link.springer.com/chapter/10.1007/978-3-032-38082-1_36) \\
+Leiyue Zhao, **Tianyu Shi**, Daniel Reisenbuchler, Xinzi He, Junchao Zhu, Tianyuan Yao, Yuechen Yang, Yanfan Zhu, Junlin Guo, Gelei Xu, Haichun Yang, Yuankai Huo, Mert R. Sabuncu, Yihe Yang, Ruining Deng
+
+- We propose MORI-Seg, a deep learning framework that enables instance segmentation of kidney functional units directly from semantic masks, without requiring instance-level annotations.
+- By jointly modeling object-centric distance fields and boundary-band representations, MORI-Seg achieves improved instance separation and more reliable morphometric quantification compared with classical post-processing pipelines.
+</div>
+</div>
+
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SPIE 2026</div><img src='images/spie.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
